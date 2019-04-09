@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery1.7.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+</head>
+<body>
+	<button id="btn">按钮</button>
+<div id="box" style="width: 200px;height: 200px;background: red"></div>
+<script type="text/javascript">
+	$("#btn").on("click",function(){
+		$("#box").animate({height:400},{
+         	easing: "easeInOutBounce",
+         	duration: 2000
+         }, function(){
+         	
+         });
+	})
+</script>
+</body>
+</html>

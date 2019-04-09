@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta  charset="utf-8"/>
+	<title></title>
+</head>
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+<script type="text/javascript">
+	$.cookie.raw = true; ///存取cookie是否编码
+	$.cookie("name", "ssss",{
+		expires:30,
+		path:"/"
+	});
+	console.log($.cookie("name"));
+</script>
+<body>
+
+</body>
+</html>

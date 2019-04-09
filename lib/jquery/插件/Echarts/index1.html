@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript" src="js/echarts.common.min.js"></script>
+<body>
+<div id="box" style="width: 500px;height: 300px"></div>
+<button id="btn">按你牛</button>
+<script>
+	console.log(echarts);
+	//引入js文件之后全局暴露一个echarts对象
+	//初始化图标信息
+	var myChart = echarts.init(document.getElementById('box'));
+	//图表数据
+	var option = {
+        title: {
+            text: 'ECharts 入门示例',
+            show:true,
+            textStyle:{
+            	color :"red"
+            }
+
+        },
+        tooltip: {},
+        legend: {
+            data:['一月销量','二月销量']
+        },
+        xAxis: {
+            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+        },
+        yAxis: {},
+        series: [{
+            name: '一月销量',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20]
+        },{
+            name: '二月销量',
+            type: 'bar',
+            data: [15, 25, 30, 20, 10, 25]
+        }]
+    };
+    myChart.setOption(option);
+
+    document.getElementById("btn").onclick = function(){
+    	myChart.resize({
+    		width: 300,
+    		height: 100
+    	});
+    }
+</script>
+
+</body>
+</html>
